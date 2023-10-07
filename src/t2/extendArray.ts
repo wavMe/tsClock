@@ -214,16 +214,6 @@ export class ArrayEX<T> {
         return preVal;
     }
 
-    // public _reduce<U = T>(
-    //     callbackfn: (
-    //         previousValue: U,
-    //         currentValue: T,
-    //         currentIndex: number,
-    //         array: ArrayEX<T>
-    //     ) => U,
-    //     initialValue?: U
-    // ) {}
-
     public _reverse(): ArrayEX<T> {
         let arr = this as any;
         let length = this.length;
@@ -413,8 +403,10 @@ export class ArrayEX<T> {
         return new ArrayEX(newArr);
     }
 
+    // _splice声明
     public _splice(start: number, deleteCount?: number): T[];
     public _splice(start: number, deleteCount: number, ...items: T[]): T[];
+    // _splice实现
     public _splice(start: number, deleteCount?: number, ...items: T[]): T[] {
         let arr = this as any;
         let length = this.length;
