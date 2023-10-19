@@ -1,5 +1,5 @@
-import { ArrayEX } from "./extendArray";
-import { MapEX } from "./extendMap";
+import { ArrayEX } from "./ExtendArray";
+import { MapEX } from "./ExtendMap";
 
 export function test() {
     // let originArr = [1, 2, 3];
