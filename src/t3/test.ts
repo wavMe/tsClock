@@ -1,4 +1,4 @@
-import * as diffDecorator from "./DiffDecorator";
+import * as diffDecorator from "./iffDecorator";
 
 export function test() {
     let helloWorld = new diffDecorator.HelloClass();

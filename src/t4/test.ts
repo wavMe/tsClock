@@ -1,4 +1,4 @@
-import { Calculator } from "./Calculator";
+import { Calculator } from "./alculator";
 
 export function test() {
     const calculator = new Calculator();
