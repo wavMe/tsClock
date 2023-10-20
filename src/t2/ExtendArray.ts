@@ -2,7 +2,7 @@
 // reduce、reverse、flat、findIndex、find、some、sort、slice、splice
 
 /**
- * 1.往现有的Array中添加新的方法
+ * 1.往现有的 Array 中添加新的方法
  */
 
 // declare global {
@@ -32,11 +32,11 @@ export class ArrayEX<T> {
         }
 
         // 动态添加属性
-        // this对象 {0:1, 1:2, 2:3, length:3}
+        // this 对象 {0:1, 1:2, 2:3, length:3}
         let arr = this as any;
         let length = args.length;
         this.length = length;
-        // 将args中的每个元素赋值到this对象的相应索引位置上
+        // 将 args 中的每个元素赋值到 this 对象的相应索引位置上
         for (let index = 0; index < length; index++) {
             arr[index] = args[index];
         }
@@ -189,7 +189,7 @@ export class ArrayEX<T> {
         ) => U,
         initialValue?: U
     ): U;
-    // _reduce的实现
+    // _reduce 的实现
     public _reduce(callbackfn: any, initialValue?: any) {
         let arr = this as any;
         // 未传初始值
@@ -229,7 +229,7 @@ export class ArrayEX<T> {
     public _push(arrEX: ArrayEX<T>): number;
     public _push(arr: T[]): number;
     public _push(item: T, ...rest: T[]): number;
-    // _push的实现
+    // _push 的实现
     public _push(arg: ArrayEX<T> | T[] | T, ...rest: T[]): number {
         let arr = this as any;
         let length = this.length;
@@ -262,7 +262,7 @@ export class ArrayEX<T> {
 
         // 单次拍平 递归函数
         function _flatOnce(arrEX: ArrayEX<T>, depth: number): void {
-            // 已极限拍平 加入resArrEX 向上归还一层
+            // 已极限拍平 加入 resArrEX 向上归还一层
             if (depth <= 0) {
                 resArrEX._push(arrEX);
                 return;
@@ -338,7 +338,7 @@ export class ArrayEX<T> {
         let arr = this as any;
         let length = this.length;
 
-        // 若未传入compareFn 默认为升序排序
+        // 若未传入 compareFn 默认为升序排序
         if (compareFn === undefined) {
             compareFn = (a: T, b: T) => {
                 if (a < b) return -1;
