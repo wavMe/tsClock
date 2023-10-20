@@ -17,7 +17,7 @@ function printString(str: string) {
     // 函数柯里化 Currying
     // 真正的装饰器
     return function (target: any) {
-        console.log("打印字符串:" + str);
+        console.log("打印字符串：" + str);
     };
 }
 
@@ -41,7 +41,7 @@ function initStudent(name: string, age: number) {
 
 // Method Decorators 方法装饰器
 /**
- * @param {any} target 对于实例成员来说是类的原型对象, 对于静态成员来说是类的构造函数
+ * @param {any} target 对于实例成员来说是类的原型对象，对于静态成员来说是类的构造函数
  * @param {string} propertyKey 成员的名字
  * @param {PropertyDescriptor} descriptor 成员的属性描述符
  */
@@ -141,15 +141,15 @@ export class Student {
         console.log(this.age);
     }
 
-    // 对于实例方法, target 是类的原型, 是一个对象
+    // 对于实例方法，target 是类的原型，是一个对象
     // 这是因为实例方法是定义在类的原型上的，而不是类的构造函数或类的实例上
     @method
     public instanceMethod() {
         return "instance method";
     }
 
-    // 对于静态方法, target 是类本身, 也就是类的构造函数
-    // 静态方法是定义在类自身(也就是构造函数)上的, 而不是类的原型或类的实例上
+    // 对于静态方法，target 是类本身，也就是类的构造函数
+    // 静态方法是定义在类自身 (也就是构造函数) 上的，而不是类的原型或类的实例上
     @method
     public static staticMethod() {
         return "static method";

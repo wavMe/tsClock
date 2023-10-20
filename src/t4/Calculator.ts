@@ -9,7 +9,7 @@ function catchError(
         try {
             // let num = 5;
             // console.log(num instanceof Number);
-            //// 值为 false，因为 num 是一个原始的数字类型, 不是 Number 类的实例
+            //// 值为 false，因为 num 是一个原始的数字类型，不是 Number 类的实例
             // console.log(typeof(num) === "number");
             //// 值为 true, typeof 只能用来检查原始类型的值
 
